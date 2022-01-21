@@ -2,6 +2,7 @@ import { Recipe } from "@cooklang/parser";
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import { RecipeRenderer } from "./components/RecipeRenderer";
+import GithubCorner from "react-github-corner";
 
 export const App = () => {
   const [recipeText, setRecipeText] = useState(sampleRecipe);
@@ -11,6 +12,7 @@ export const App = () => {
 
   return (
     <div className="container px-4 mx-auto">
+      <GithubCorner href="https://github.com/biowaffeln/cooklang-parser" />
       <h1 className="mt-16 text-3xl font-bold">Cooklang Parser Demo</h1>
       <div className="grid gap-6 mt-10 md:grid-cols-2">
         <div className="flex flex-col h-[70vh]">
