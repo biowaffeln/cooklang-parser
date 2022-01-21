@@ -1,0 +1,18 @@
+{
+	"name": "@cooklang/parser",
+	"version": "0.0.0",
+	"scripts": {
+		"test": "jest --coverage",
+		"test:watch": "jest --watchAll",
+		"build": "tsc"
+	},
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"devDependencies": {
+		"@types/node": "^17.0.8",
+		"jest": "^27.4.7",
+		"ts-jest": "^27.1.2",
+		"typescript": "^4.5.4",
+		"yaml": "^1.10.2"
+	}
+}
