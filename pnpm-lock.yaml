@@ -38,15 +38,17 @@ importers:
 
   parser:
     specifiers:
+      '@types/jest': ^27.4.0
       '@types/node': ^17.0.8
       jest: ^27.4.7
       ts-jest: ^27.1.2
       typescript: ^4.5.4
       yaml: ^1.10.2
     devDependencies:
+      '@types/jest': 27.4.0
       '@types/node': 17.0.8
       jest: 27.4.7
-      ts-jest: 27.1.2_jest@27.4.7+typescript@4.5.4
+      ts-jest: 27.1.2_9364f2ad0b7b67f00a4d081c662c6871
       typescript: 4.5.4
       yaml: 1.10.2
 
@@ -873,6 +875,13 @@ packages:
     resolution: {integrity: sha512-c3mAZEuK0lvBp8tmuL74XRKn1+y2dcwOUpH7x4WrF6gk1GIgiluDRgMYQtw2OFcBvAJWlt6ASU3tSqxp0Uu0Aw==}
     dependencies:
       '@types/istanbul-lib-report': 3.0.0
+    dev: true
+
+  /@types/jest/27.4.0:
+    resolution: {integrity: sha512-gHl8XuC1RZ8H2j5sHv/JqsaxXkDDM9iDOgu0Wp8sjs4u/snb2PVehyWXJPr+ORA0RPpgw231mnutWI1+0hgjIQ==}
+    dependencies:
+      jest-diff: 27.4.6
+      pretty-format: 27.4.6
     dev: true
 
   /@types/node/17.0.8:
@@ -3297,7 +3306,7 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /ts-jest/27.1.2_jest@27.4.7+typescript@4.5.4:
+  /ts-jest/27.1.2_9364f2ad0b7b67f00a4d081c662c6871:
     resolution: {integrity: sha512-eSOiJOWq6Hhs6Khzk5wKC5sgWIXgXqOCiIl1+3lfnearu58Hj4QpE5tUhQcA3xtZrELbcvAGCsd6HB8OsaVaTA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -3318,6 +3327,7 @@ packages:
       esbuild:
         optional: true
     dependencies:
+      '@types/jest': 27.4.0
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
       jest: 27.4.7

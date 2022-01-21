@@ -9,6 +9,7 @@
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
 	"devDependencies": {
+		"@types/jest": "^27.4.0",
 		"@types/node": "^17.0.8",
 		"jest": "^27.4.7",
 		"ts-jest": "^27.1.2",
