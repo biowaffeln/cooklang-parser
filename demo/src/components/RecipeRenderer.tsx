@@ -39,9 +39,12 @@ export const RecipeRenderer: VFC<RecipeRendererProps> = ({ name, recipe }) => {
           </tbody>
         </table>
       </section>
-      <div className="flex flex-wrap mt-6 gap-4">
-        <section className="p-4 border rounded min-w-[10rem] w-full md:w-auto">
-          <h3 className="text-xs font-bold text-zinc-700 uppercase">
+      <div className="flex flex-wrap mt-8 gap-4">
+        <section className="p-4 border border-zinc-300 rounded min-w-[10rem] w-full md:w-auto relative">
+          <h3
+            className="text-xs font-bold text-zinc-700 uppercase bg-white px-3
+                       inline-block absolute -top-2 left-[5px]"
+          >
             Ingredients
           </h3>
           <ul className="mt-2 list-disc list-inside space-y-0.5">
@@ -55,21 +58,24 @@ export const RecipeRenderer: VFC<RecipeRendererProps> = ({ name, recipe }) => {
             ))}
           </ul>
         </section>
-        <section className="p-4 border rounded min-w-[10rem] w-full md:w-auto">
-          <h3 className="text-xs font-bold text-zinc-700 uppercase">
+        <section className="p-4 border border-zinc-300 rounded min-w-[10rem] w-full md:w-auto relative">
+          <h3
+            className="text-xs font-bold text-zinc-700 uppercase bg-white px-3
+                       inline-block absolute -top-2 left-[5px]"
+          >
             Cookware
           </h3>
           <ul className="mt-2 list-inside list-disc">
             {recipe.cookware.map((cookware) => (
               <li key={cookware.name}>
-                <span className="">{cookware.quantity}</span>
-                <span className="">{cookware.name}</span>
+                <span>{cookware.quantity}</span>
+                <span>{cookware.name}</span>
               </li>
             ))}
           </ul>
         </section>
       </div>
-      <ol className="list-decimal ml-6 mt-8 space-y-4">
+      <ol className="list-decimal ml-6 mt-10 space-y-4">
         {recipe.steps.map((step, i) => (
           <li key={i} className="text-lg leading-relaxed">
             {step.map((token, i) => {
@@ -82,14 +88,18 @@ export const RecipeRenderer: VFC<RecipeRendererProps> = ({ name, recipe }) => {
               }
               if (token.type === "timer") {
                 return (
-                  <span key={i} data-token="timer">
+                  <span key={i} data-token="timer" title={token.name}>
                     {token.quantity} {token.units}
                   </span>
                 );
               }
               if (token.type === "ingredient") {
                 return (
-                  <span key={i} data-token="ingredient">
+                  <span
+                    key={i}
+                    data-token="ingredient"
+                    title={`${token.quantity} ${token.units}`}
+                  >
                     {token.name}
                   </span>
                 );
