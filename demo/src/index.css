@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 .tab {
-  @apply pt-2 px-4 pb-1.5 border border-gray-300 z-10 rounded-t w-20 text-gray-700 text-sm font-medium
+	@apply pt-2 px-4 pb-1.5 border border-gray-300 z-10 rounded-t w-20 text-gray-700 text-sm font-medium
        bg-gray-100;
 }
 
 .tab[data-state="active"] {
-  @apply border-b-white bg-white;
+	@apply border-b-white bg-white;
 }
 
 [data-token]:not([data-token="text"]) {
-  @apply py-0.5 px-1.5 rounded-sm;
+	@apply py-0.5 px-1.5 rounded-sm;
 }
 
 [data-token="ingredient"] {
-  @apply bg-red-100 text-red-900;
+	@apply bg-red-100 text-red-900;
 }
 
 [data-token="cookware"] {
-  @apply bg-yellow-100 text-yellow-900;
+	@apply bg-yellow-100 text-yellow-900;
 }
 
 [data-token="timer"] {
-  @apply bg-sky-100 text-sky-900;
+	@apply bg-sky-100 text-sky-900;
 }
