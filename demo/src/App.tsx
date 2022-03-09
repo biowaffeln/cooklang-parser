@@ -40,7 +40,7 @@ export const App = () => {
 							AST
 						</Tabs.Trigger>
 					</Tabs.List>
-					<div className="overflow-scroll border border-gray-300">
+					<div className="overflow-y-auto border border-gray-300">
 						<Tabs.TabsContent value="AST">
 							<pre className="p-4 text-sm whitespace-pre-wrap text-gray-700">
 								{JSON.stringify(data, null, 2)}
