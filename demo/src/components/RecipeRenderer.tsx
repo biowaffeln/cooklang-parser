@@ -1,5 +1,5 @@
 import { VFC } from "react";
-import type { Recipe } from "@cooklang/parser";
+import type { Recipe } from "cooklang-parser";
 
 interface RecipeRendererProps {
 	name: string;

@@ -1,4 +1,4 @@
-import { Recipe } from "@cooklang/parser";
+import { Recipe } from "cooklang-parser";
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import { RecipeRenderer } from "./components/RecipeRenderer";
